@@ -1,5 +1,6 @@
 <h1>Docker</h1>
 <p>Esse sistema foi feito para rodar no Docker, aqui estão os arquivos para fazer a Build da imagem e posteiormente rodar os 3 container em networks.</p>
+<h3>Comando: docker-compose build</h3>
 <h1>PostMan</h1>
 <p>Json para importar no postman e fazer as requisições:</p>
 {

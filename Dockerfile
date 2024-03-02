@@ -1,7 +1,7 @@
 FROM php:8.2-fpm
 
 # Copia composer.lock e composer.json
-#COPY composer.lock composer.json /var/www/html/
+COPY composer.lock composer.json /var/www/html/
 
 # Define o diretório de trabalho
 WORKDIR /var/www
