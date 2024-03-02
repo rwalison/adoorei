@@ -85,7 +85,11 @@ class SaleController extends Controller
         }
 
         // Recalcula o valor total da venda
-        $sale->amount = $sale->products()->sum('products.price');
+        $sale->amount = SaleProduct::where('sale_id', '=', $saleId)
+            ->selectRaw('SUM(price * amount) as total')
+            ->first()
+            ->total;
+
         $sale->save();
 
         return response()->json(['message' => 'Venda atualizada com sucesso'], 200);
